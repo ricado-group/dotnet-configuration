@@ -9,6 +9,8 @@
     <RepositoryUrl>https://github.com/ricado-group/dotnet-configuration</RepositoryUrl>
     <PackageIcon>packageIcon.png</PackageIcon>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
