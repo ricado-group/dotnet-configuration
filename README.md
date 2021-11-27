@@ -1,2 +1,2 @@
 # RICADO.Configuration
-A Configuration Provider for .NET 5 Applications
+A Configuration Provider for .NET 6 Applications
