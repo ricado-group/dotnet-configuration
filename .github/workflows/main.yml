@@ -20,9 +20,10 @@ jobs:
       
       # Step 2 - Build and Publish
       - name: Build and Publish
-        uses: ricado-group/dotnet-library-build-release-action@v1.1
+        uses: ricado-group/dotnet-library-build-release-action@v1.2
         with:
           project-name: 'RICADO.Configuration'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           private-nuget-url: 'https://nuget.pkg.github.com/ricado-group/index.json'
           private-nuget-token: ${{ secrets.GH_ACTIONS_PAT }}
           public-nuget-token: ${{ secrets.NUGET_APIKEY }}
