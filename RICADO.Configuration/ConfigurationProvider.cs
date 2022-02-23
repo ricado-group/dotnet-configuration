@@ -104,13 +104,21 @@ namespace RICADO.Configuration
                 return true;
             }
 
+#if NETSTANDARD
+            Queue<string> pathSegments = new Queue<string>(path.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries));
+#else
             Queue<string> pathSegments = new Queue<string>(path.Split('.', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries));
+#endif
 
             IConfigurationSection section = null;
 
             while (pathSegments.Count > 1)
             {
+#if NETSTANDARD
+                string sectionKey = pathSegments.Dequeue().Trim();
+#else
                 string sectionKey = pathSegments.Dequeue();
+#endif
 
                 if (section == null)
                 {
@@ -215,13 +223,21 @@ namespace RICADO.Configuration
                 return true;
             }
 
+#if NETSTANDARD
+            Queue<string> pathSegments = new Queue<string>(path.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries));
+#else
             Queue<string> pathSegments = new Queue<string>(path.Split('.', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries));
+#endif
 
             IConfigurationSection section = null;
 
             while (pathSegments.Count > 1)
             {
+#if NETSTANDARD
+                string sectionKey = pathSegments.Dequeue().Trim();
+#else
                 string sectionKey = pathSegments.Dequeue();
+#endif
 
                 if (section == null)
                 {
