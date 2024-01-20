@@ -17,7 +17,7 @@ jobs:
     steps:
       # Step 1 - Checkout Code
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       # Step 2 - Build and Publish
       - name: Build and Publish
@@ -29,4 +29,4 @@ jobs:
           private-nuget-token: ${{ secrets.GH_PACKAGES_PAT }}
           public-nuget-token: ${{ secrets.NUGET_APIKEY }}
           publish-public: true
-          dotnet-version: 7.0.x
+          dotnet-version: 8.0.x
